@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+
+    <title>Doggy-Wiki | a dog breed information app</title>
+
+    <!--- basic page needs and meta to boost SEO
+    ================================================== -->
+    <meta
+      name="description"
+      content="Doggy-Wiki - a simple application for dog lovers to get information on all the different breeds of domestic cats."
+    />
+    <meta name="author" content="Mark Watson" />
+    <meta
+      name="KEYWORDS"
+      content="full stack developer, dogs, doggies, doggy-wiki, dog-pedia, dog encyclopedia, doggy,
+                                  canines, React, PWA"
+    />
+    
+    <!--  required for Android’s Chrome browser colour -->
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="mask-icon" href="%PUBLIC_URL%/maskable_icon_x512.png">
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <div id="root"></div>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("%PUBLIC_URL%/service-worker.js")
+
+            .then((registration) =>
+              // Registration was successful
+              console.log(
+                "Service worker registration successful with scope: ",
+                registration.scope
+              )
+            )
+
+            .catch((error) =>
+              // registration failed :(
+              console.log("Service worker registration failed: ", error)
+            );
+        });
+      } else {
+        console.log('Service Worker files are not supported by browser. This app is not installable.');
+      }
+    </script>
+  </body>
+</html>
