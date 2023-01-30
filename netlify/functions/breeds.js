@@ -4,9 +4,9 @@ const doggyNinjaDb = require( "./utils/api-ninjas-doggyDb.json" );
 exports.handler = (event, context, callback) => {
 
   const selectedBreed = JSON.parse(event.body);
-  console.log("selected breed = ", selectedBreed);
-
   const breeds = doggyDb[doggyDb.findIndex( item => item.name === selectedBreed.breed)];
+  const ninjaDb = doggyNinjaDb[doggyNinjaDb.findIndex( info => info.name === selectedBreed.breed)];
+  const selectionData = {...breeds, ...ninjaDb};
 
   context.callbackWaitsForEmptyEventLoop = false;
 
@@ -16,6 +16,6 @@ exports.handler = (event, context, callback) => {
                 'Access-Control-Allow-Origin': '*',
                 'Content-Type': 'application/json'
               },
-              body: JSON.stringify(breeds)
+              body: JSON.stringify(selectionData)
             })
         }

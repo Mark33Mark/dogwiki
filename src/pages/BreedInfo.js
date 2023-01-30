@@ -8,12 +8,12 @@ import BreedData from "../components/BreedData";
 import MorePics from "../components/MorePics";
 
 const BreedInfo = () => {
+  
   const [loading, setLoading] = useState(true);
   const [info, setInfo] = useState({});
 
   const { name } = useParams();
   const breedSelected = { name };
-  console.log("Breed selected = " + breedSelected.name);
 
   useEffect(() => {
     fetch(`/.netlify/functions/breeds`, {
@@ -25,16 +25,14 @@ const BreedInfo = () => {
       .then(setTimeout(() => setLoading(false), 1500));
   }, []);
 
-  console.log('info=', info);
-
   return loading ? (
     <LoadingSpinner />
   ) : (
     <>
       <Header />
       <BreedData breedInfo={info} />
-      <h3 style={{ padding: "0 2rem" }}>Gallery:</h3>
-      {/* <MorePics breedId={info.id} /> */}
+      {/* <h3 style={{ padding: "0 2rem" }}>Gallery:</h3> */}
+      <MorePics ninjaDb_image_link={info.image_link} />
     </>
   );
 };

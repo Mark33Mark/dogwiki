@@ -3,7 +3,6 @@ const doggyDb = require( "./utils/doggyDb.json" );
 exports.handler = (event, context, callback) => {
 
   const breeds = doggyDb.map((dogs)=>dogs.name)
-  console.log(breeds);
 
   context.callbackWaitsForEmptyEventLoop = false;
 

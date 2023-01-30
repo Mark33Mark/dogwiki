@@ -1,6 +1,7 @@
 import React from "react";
 
 const Dashboard = (props) => {
+
   const { info } = props;
 
   const colorRatings = (num) => {
@@ -27,8 +28,24 @@ const Dashboard = (props) => {
         {info.origin}
       </p>
       <p>
+        <span>Breed Group: </span>
+        {info.breed_group}
+      </p>
+      <p>
+        <span>Bred For: </span>
+        {info.bred_for}
+      </p>
+      <p>
         <span>Life Span: </span>
-        {info.life_span + " years"}
+        {info.life_span }
+      </p>
+      <p>
+        <span>Height Range: </span>
+        {info.height.metric + " cm"}
+      </p>
+      <p>
+        <span>Weight Range: </span>
+        {info.weight.metric + " kg"}
       </p>
 
       <br />
@@ -41,23 +58,51 @@ const Dashboard = (props) => {
       </div>
 
       <div className="rating">
-        <span className="stat">Adaptability: </span>
+        <span className="stat">Barking: </span>
         <div className="rating-container">
-          {colorRatings(info.adaptability)}
+          {colorRatings(info.barking)}
         </div>
       </div>
 
       <div className="rating">
-        <span className="stat">Affection level: </span>
+        <span className="stat">Coat Length: </span>
         <div className="rating-container">
-          {colorRatings(info.affection_level)}
+          {colorRatings(info.coat_length)}
         </div>
       </div>
 
       <div className="rating">
-        <span className="stat">Child friendly: </span>
+        <span className="stat">Drooling: </span>
         <div className="rating-container">
-          {colorRatings(info.child_friendly)}
+          {colorRatings(info.drooling)}
+        </div>
+      </div>
+
+      <div className="rating">
+        <span className="stat">Energy: </span>
+        <div className="rating-container">
+          {colorRatings(info.energy)}
+        </div>
+      </div>
+
+      <div className="rating">
+        <span className="stat">Good with children: </span>
+        <div className="rating-container">
+          {colorRatings(info.good_with_children)}
+        </div>
+      </div>
+
+      <div className="rating">
+        <span className="stat">Good with other dogs: </span>
+        <div className="rating-container">
+          {colorRatings(info.good_with_other_dogs)}
+        </div>
+      </div>
+
+      <div className="rating">
+        <span className="stat">Good with strangers: </span>
+        <div className="rating-container">
+          {colorRatings(info.good_with_strangers)}
         </div>
       </div>
 
@@ -67,37 +112,30 @@ const Dashboard = (props) => {
       </div>
 
       <div className="rating">
-        <span className="stat">Health issues: </span>
+        <span className="stat">Playfulness: </span>
         <div className="rating-container">
-          {colorRatings(info.health_issues)}
+          {colorRatings(info.playfulness)}
         </div>
       </div>
 
       <div className="rating">
-        <span className="stat">Intelligence: </span>
+        <span className="stat">Protectiveness: </span>
         <div className="rating-container">
-          {colorRatings(info.intelligence)}
+          {colorRatings(info.protectiveness)}
         </div>
       </div>
 
       <div className="rating">
-        <span className="stat">Social needs: </span>
+        <span className="stat">Shedding: </span>
         <div className="rating-container">
-          {colorRatings(info.social_needs)}
+          {colorRatings(info.shedding)}
         </div>
       </div>
 
       <div className="rating">
-        <span className="stat">Shedding level: </span>
+        <span className="stat">Trainability: </span>
         <div className="rating-container">
-          {colorRatings(info.shedding_level)}
-        </div>
-      </div>
-
-      <div className="rating">
-        <span className="stat">Stranger friendly: </span>
-        <div className="rating-container">
-          {colorRatings(info.stranger_friendly)}
+          {colorRatings(info.trainability)}
         </div>
       </div>
       

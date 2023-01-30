@@ -1,5 +1,16 @@
 @import url("./utils/icomoon/iconfonts.css");
 
+:root {
+  --main-box-shadow: 
+        0 0 10px 1.5px red, 
+        0 0 8px 3px #ff7f00, 
+        0 0 8px 4.5px #ff0, 
+        0 0 8px 6px #0f0, 
+        0 0 8px 7.5px #00f, 
+        0 0 8px 9px indigo, 
+        0 0 8px 10px #9400d3;;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -71,7 +82,11 @@ code {
 
 @media (prefers-reduced-motion: no-preference) {
   .bichon-head {
-    animation: startup-logo-spin infinite 5s linear;
+    -webkit-animation: startup-logo-spin infinite 5s linear; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: startup-logo-spin infinite 5s linear; /* Firefox < 16 */
+        -ms-animation: startup-logo-spin infinite 5s linear; /* Internet Explorer */
+         -o-animation: startup-logo-spin infinite 5s linear; /* Opera < 12.1 */
+            animation: startup-logo-spin infinite 5s linear; /* W3C */
   }
 }
 
@@ -82,7 +97,7 @@ code {
 .welcome {
   display: flex;
   flex-direction: column;
-    align-items: center;
+  align-items: center;
 }
 
 .welcome-message {
@@ -92,7 +107,7 @@ code {
      -moz-animation: fadein 3s; /* Firefox < 16 */
       -ms-animation: fadein 3s; /* Internet Explorer */
        -o-animation: fadein 3s; /* Opera < 12.1 */
-          animation: fadein 3s;
+          animation: fadein 3s; /* W3C */
 }
 
 .welcome-button {
@@ -112,21 +127,11 @@ code {
   font-weight: 600;
   color: black;
 
-  box-shadow: 0px 0px 5px 3px rgba(255,0,0,1),
-  0px 0px 5px 6px rgba(255,127,0,1),
-  0px 0px 5px 9px rgba(255,255,0,1),
-  0px 0px 5px 12px rgba(0,255,0,1),  
-  0px 0px 5px 15px rgba(0,0,255,1),  
-  0px 0px 5px 18px rgba(75,0,130,1),
-  0px 0px 5px 21px rgba(148,0,211,1);
-
-  -webkit-box-shadow: 0px 0px 5px 3px rgba(255,0,0,1),
-  0px 0px 5px 6px rgba(255,127,0,1),
-  0px 0px 5px 9px rgba(255,255,0,1),
-  0px 0px 5px 12px rgba(0,255,0,1),  
-  0px 0px 5px 15px rgba(0,0,255,1),  
-  0px 0px 5px 18px rgba(75,0,130,1),
-  0px 0px 5px 21px rgba(148,0,211,1);
+  -webkit-box-shadow: var(--main-box-shadow);   /* Safari & Chrome */
+  -moz-box-shadow: var(--main-box-shadow);      /* Firefox */
+  -ms-box-shadow: var(--main-box-shadow);       /* Internet Explorer */
+  -o-box-shadow: var(--main-box-shadow);        /* Opera */
+  box-shadow: var(--main-box-shadow);           /* W3C */
 
 }
 
@@ -207,11 +212,10 @@ div.header {
 
 .homepage {
   background-image: url("./assets/header.png");
-  background-color: #cccccc;
-  height: 38rem;
+  background-color: #333;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
   position: relative;
 }
 
@@ -226,6 +230,8 @@ div.header {
   position: relative;
   display: flex;
   align-items: center;
+  flex-direction: column-reverse;
+  justify-content: center;
 }
 
 img.menu-image {
@@ -245,35 +251,28 @@ img.menu-image {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   font-weight: 700;
   border: none;
-  vertical-align: middle;
   transition: box-shadow 0.4s ease;
-  margin-left: auto; /* Strictly for positioning */
 }
 
 .menu-trigger:hover,
 .menu-trigger:active,
 .menu-trigger:focus {
-  box-shadow: 0px 0px 5px 3px rgba(255,0,0,1),
-  0px 0px 5px 6px rgba(255,127,0,1),
-  0px 0px 5px 9px rgba(255,255,0,1),
-  0px 0px 5px 12px rgba(0,255,0,1),  
-  0px 0px 5px 15px rgba(0,0,255,1),  
-  0px 0px 5px 18px rgba(75,0,130,1),
-  0px 0px 5px 21px rgba(148,0,211,1);
 
-  -webkit-box-shadow: 0px 0px 5px 3px rgba(255,0,0,1),
-  0px 0px 5px 6px rgba(255,127,0,1),
-  0px 0px 5px 9px rgba(255,255,0,1),
-  0px 0px 5px 12px rgba(0,255,0,1),  
-  0px 0px 5px 15px rgba(0,0,255,1),  
-  0px 0px 5px 18px rgba(75,0,130,1),
-  0px 0px 5px 21px rgba(148,0,211,1);
+  -webkit-box-shadow: var(--main-box-shadow);   /* Safari & Chrome */
+  -moz-box-shadow: var(--main-box-shadow);      /* Firefox */
+  -ms-box-shadow: var(--main-box-shadow);       /* Internet Explorer */
+  -o-box-shadow: var(--main-box-shadow);        /* Opera */
+  box-shadow: var(--main-box-shadow);           /* W3C */
 }
 
-.menu-trigger:focus >
-img.menu-image
-{
-  transform: scale(150%) translateY(-10px);
+.menu-trigger:focus > img.menu-image,
+.menu-trigger:active > img.menu-image,
+.menu-trigger:hover > img.menu-image {
+  -webkit-transform: scale(150%) translateY(-10px); /* Safari & Chrome */
+  -moz-transform: scale(150%) translateY(-10px);    /* Firefox */
+  -ms-transform: scale(150%) translateY(-10px);     /* Internet Explorer */
+  -o-transform: scale(150%) translateY(-10px);      /* Opera */
+  transform: scale(150%) translateY(-10px);         /* W3C */
 }
 
 .menu-trigger div {
@@ -290,24 +289,22 @@ img.menu-image
 .menu {
   background: #ffffff;
   border-radius: 8px;
-  position: absolute;
-  top: 20px;
-  right: 0;
+  position: relative;
+  margin-bottom: 1.5rem;
   width: 18rem;
   overflow-x: hidden;
   overflow-y: scroll;
-  max-height: 320px;
+  max-height: 27rem;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-20px);
   transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
 }
 
 .menu.active {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  float: bottom;
 }
 
 .menu ul {
@@ -332,27 +329,36 @@ img.menu-image
  * https://github.com/ashleypean/cat-wiki
  */
 
+.doggy-link-container {
+    height: 6rem;
+    width: 6rem;
+    margin: 0.5rem auto;
+}
+
+.doggy-face-logo {
+  -webkit-transform: rotate(5deg); /* Safari & Chrome */
+  -moz-transform: rotate(5deg);    /* Firefox */
+  -ms-transform: rotate(5deg);     /* Internet Explorer */
+  -o-transform: rotate(5deg);      /* Opera */
+  transform: rotate(5deg);         /* W3C */
+}
+
 .doggy-face-logo:hover {
 
   border-radius: 50%; 
   background-color: cornflowerblue;
-  transform: scale(70%);
 
-  box-shadow: 0px 0px 5px 3px rgba(255,0,0,1),
-  0px 0px 5px 6px rgba(255,127,0,1),
-  0px 0px 5px 9px rgba(255,255,0,1),
-  0px 0px 5px 12px rgba(0,255,0,1),  
-  0px 0px 5px 15px rgba(0,0,255,1),  
-  0px 0px 5px 18px rgba(75,0,130,1),
-  0px 0px 5px 21px rgba(148,0,211,1);
+  -webkit-transform: scale(70%) rotate(5deg);  /* Safari & Chrome */
+  -moz-transform:  scale(70%) rotate(5deg);    /* Firefox */
+  -ms-transform:  scale(70%) rotate(5deg);     /* Internet Explorer */
+  -o-transform:  scale(70%) rotate(5deg);      /* Opera */
+  transform: scale(70%) rotate(5deg);          /* W3C */
 
-  -webkit-box-shadow: 0px 0px 5px 3px rgba(255,0,0,1),
-  0px 0px 5px 6px rgba(255,127,0,1),
-  0px 0px 5px 9px rgba(255,255,0,1),
-  0px 0px 5px 12px rgba(0,255,0,1),  
-  0px 0px 5px 15px rgba(0,0,255,1),  
-  0px 0px 5px 18px rgba(75,0,130,1),
-  0px 0px 5px 21px rgba(148,0,211,1);
+  -webkit-box-shadow: var(--main-box-shadow);   /* Safari & Chrome */
+  -moz-box-shadow: var(--main-box-shadow);      /* Firefox */
+  -ms-box-shadow: var(--main-box-shadow);       /* Internet Explorer */
+  -o-box-shadow: var(--main-box-shadow);        /* Opera */
+  box-shadow: var(--main-box-shadow);           /* W3C */
 }
 
 div.breed-data {

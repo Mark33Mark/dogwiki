@@ -7,8 +7,10 @@ const MorePics = (props) => {
   return (
 
     <div className="other-photos">
-        <div className="photos"> </div>
-      </div>
+        <div className="photos"> 
+        <img src={props.ninjaDb_image_link} alt="selected dog" />
+        </div>
+    </div>
   );
 }
 

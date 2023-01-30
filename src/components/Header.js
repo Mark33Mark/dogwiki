@@ -5,8 +5,8 @@ import doggy_face from "../assets/doggy_face.png";
   const Header = () => {
     return (
       <>
-          <div style={{top:"0", height:"100px", width:"100vw", backgroundColor:"rgb(255, 255, 255)", }}>
-            <div style={{height:"6rem", width:"6rem", margin:"0 auto", paddingTop:"1.5rem"}}>
+          <div className="header-container" >
+            <div  className="doggy-link-container">
                 <Link to="/api"  style={{cursor:"pointer"}}>
                 <img
                   alt="dog face button to return to the menu of dog breeds."

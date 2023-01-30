@@ -16,7 +16,7 @@ const Landing = () => {
 
   return (
     <>
-      <div className="homepage" style={{ backgroundColor: "black" }}>
+      <div className="homepage">
         <BreedSearch names={names} />
       </div>
     </>

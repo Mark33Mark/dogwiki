@@ -3,7 +3,6 @@ import Dashboard from "./Dashboard";
 
 const BreedData = (props) => {
 
-  console.log(props); 
   return (
     <div className="breed-data">
       <div className="photo-container">
