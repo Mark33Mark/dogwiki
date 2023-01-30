@@ -489,6 +489,7 @@ div.other-photos {
   display: flex;
   height: auto;
   padding: 0 2rem;
+  justify-content: center;
 }
 
 div.other-photos h3 {
