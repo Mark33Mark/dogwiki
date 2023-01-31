@@ -347,19 +347,15 @@ img.menu-image {
 
 .header-container,
 .footer-container {
-  height: 7rem;
+  height: 5rem;
   display: flex;
   justify-content: center;
 }
 
 .footer-container {
   position: relative;
-  margin-top: 7rem;
+  margin-top: 5rem;
   bottom: 0;
-}
-
-.doggy-link-container {
-    padding: 0.5rem;
 }
 
 .doggy-face-logo {
