@@ -345,11 +345,20 @@ img.menu-image {
  * https://github.com/ashleypean/cat-wiki
  */
 
-.header-container,
+.header-container {
+  display: flex;
+  justify-content: center;  
+}
+
+
 .footer-container {
   height: 5rem;
   display: flex;
   justify-content: center;
+}
+
+.doggy-link-container {
+  height: 6rem;
 }
 
 .footer-container {
@@ -383,13 +392,6 @@ img.menu-image {
   -ms-box-shadow: var(--main-box-shadow);       /* Internet Explorer */
   -o-box-shadow: var(--main-box-shadow);        /* Opera */
   box-shadow: var(--main-box-shadow);           /* W3C */
-}
-
-/* Clear the floats after image containers */
-.header-container::after {
-  content: "";
-  clear: both;
-  display: table;
 }
 
 div.breed-data {

@@ -32,7 +32,6 @@ const BreedInfo = () => {
     <>
       <Header />
       <BreedData breedInfo={info} />
-      {/* <h3 style={{ padding: "0 2rem" }}>Gallery:</h3> */}
       <MorePics ninjaDb_image_link={info.image_link} />
       <Footer />
     </>

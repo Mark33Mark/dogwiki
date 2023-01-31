@@ -12,8 +12,8 @@ import doggy_face from "../assets/doggy_face.png";
                   alt="dog face button to return to the menu of dog breeds."
                   className="doggy-face-logo"
                   src={doggy_face}
-                  width="100%"
-                  height="100%"
+                  width="85%"
+                  height="85%"
                   title="click to return to dog breeds menu."
               />
               </Link>
