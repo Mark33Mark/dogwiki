@@ -9,7 +9,7 @@ const Landing = () => {
     fetch('.netlify/functions/api')
       .then(res => res.json())
       .then(data => {
-        console.log("breeds = ", data);
+        // console.log("breeds = ", data);
         setNames(data);
       });
     }, []);

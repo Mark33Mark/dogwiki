@@ -2,6 +2,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import { useParams } from "react-router-dom";
 import LoadingSpinner from "../components/Loading";
 import BreedData from "../components/BreedData";
@@ -33,6 +34,7 @@ const BreedInfo = () => {
       <BreedData breedInfo={info} />
       {/* <h3 style={{ padding: "0 2rem" }}>Gallery:</h3> */}
       <MorePics ninjaDb_image_link={info.image_link} />
+      <Footer />
     </>
   );
 };

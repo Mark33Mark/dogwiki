@@ -18,7 +18,6 @@ import doggy_face from "../assets/doggy_face.png";
               />
               </Link>
             </div>
-
           </div>
 
       </>

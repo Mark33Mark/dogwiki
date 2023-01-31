@@ -30,14 +30,14 @@ const Startup = () => {
       <InstallPWA />
       <div className="startup">
         <header className="startup-header">
-          <div className='bichon-container'>
-              <div className='bichon-body-container'>
+
+            <div className='bichon-container'>
                 <img src={bichon_body} className="bichon-body" alt="bichon frise body" />
-              </div>
-              <div className='bichon-head-container'>
-                <img src={bichon_head} className="bichon-head" alt="bichon frise head" />
-              </div>
-          </div>
+                <span className="head-container">
+                  <img src={bichon_head} className="bichon-head" alt="bichon frise head" />
+                </span>
+            </div>
+
           <div>{
               !data ?  "...loading" 
             : 

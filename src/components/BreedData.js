@@ -6,11 +6,13 @@ const BreedData = (props) => {
   return (
     <div className="breed-data">
       <div className="photo-container">
-        <img
-          src={props.breedInfo.image.url}
-          alt="Placeholder"
-          className="photo"
-        />
+        <a href={props.breedInfo.image.url}>
+          <img
+            src={props.breedInfo.image.url}
+            alt="Placeholder"
+            className="photo"
+          />
+        </a>
       </div>
       <div className="right">
         <div className="text">

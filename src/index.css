@@ -55,29 +55,24 @@ code {
 }
 
 .bichon-container {
-  display: flex;
-
-}
-
-.bichon-body-container {
-  display: flex;
+  position: relative;
+  height: 400px;
+  
 }
 
 .bichon-body {
   position: absolute;
-  height: 30vh;
+  height: 280px;
 }
 
-.bichon-head-container {
-  display: flex;
+.head-container {
   position: relative;
-  left: -75px;
-  top: -70px;
+  top:-94px;
+  left: -70px;
 }
 
 .bichon-head {
-  position: relative;
-  height: 30vh;
+  height: 280px; 
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -90,7 +85,28 @@ code {
   }
 }
 
+/* W3C */
 @keyframes startup-logo-spin {
+  50% {transform: rotate(50deg);}
+}
+
+/* Firefox < 16 */
+@-moz-keyframes startup-logo-spin {
+  50% {transform: rotate(50deg);}
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes startup-logo-spin {
+  50% {transform: rotate(50deg);}
+}
+
+/* Internet Explorer */
+@-ms-keyframes startup-logo-spin {
+  50% {transform: rotate(50deg);}
+}
+
+/* Opera < 12.1 */
+@-o-keyframes startup-logo-spin {
   50% {transform: rotate(50deg);}
 }
 
@@ -98,6 +114,7 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .welcome-message {
@@ -111,12 +128,10 @@ code {
 }
 
 .welcome-button {
-  /* position: relative; */
   text-decoration: none;
   background-color: bisque;
   padding: 0.5rem;
   margin-top: 2rem;
-  /* transform: translateX(-4rem); */
   border-radius: 5px;
 }
 
@@ -135,6 +150,7 @@ code {
 
 }
 
+/* W3C */
 @keyframes fadein {
   from { opacity: 0; }
   to   { opacity: 1; }
@@ -329,10 +345,21 @@ img.menu-image {
  * https://github.com/ashleypean/cat-wiki
  */
 
+.header-container,
+.footer-container {
+  height: 7rem;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-container {
+  position: relative;
+  margin-top: 7rem;
+  bottom: 0;
+}
+
 .doggy-link-container {
-    height: 6rem;
-    width: 6rem;
-    margin: 0.5rem auto;
+    padding: 0.5rem;
 }
 
 .doggy-face-logo {
@@ -343,7 +370,8 @@ img.menu-image {
   transform: rotate(5deg);         /* W3C */
 }
 
-.doggy-face-logo:hover {
+.doggy-face-logo:hover,
+.cat-face-logo:hover {
 
   border-radius: 50%; 
   background-color: cornflowerblue;
@@ -359,6 +387,13 @@ img.menu-image {
   -ms-box-shadow: var(--main-box-shadow);       /* Internet Explorer */
   -o-box-shadow: var(--main-box-shadow);        /* Opera */
   box-shadow: var(--main-box-shadow);           /* W3C */
+}
+
+/* Clear the floats after image containers */
+.header-container::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 div.breed-data {
@@ -504,10 +539,9 @@ div.other-photos div.photos a {
 
 div.other-photos div.photos a img {
   background-color: rgb(65, 65, 65);
-  width: 44%;
-  height: 7rem;
+  width: 95vw;
+  height: auto;
   object-fit: scale-down;
-  margin: 5% 2.5%;
   border-radius: 12px;
 }
 
@@ -517,9 +551,8 @@ div.other-photos div.photos a img {
   }
 
   div.other-photos div.photos a img {
-    width: 23%;
-    height: 9rem;
-    margin: 1.5% 1%;
+    width: 100%;
+    height: 100%;
   }
 }
 

@@ -3,6 +3,8 @@ import React from "react";
 const Dashboard = (props) => {
 
   const { info } = props;
+  
+  // console.log("info = ", info);
 
   const colorRatings = (num) => {
     const ratingsArr = [];
@@ -23,10 +25,10 @@ const Dashboard = (props) => {
         <span>Temperament: </span>
         {info.temperament}
       </p>
-      <p>
+      { info.origin ? <p>
         <span>Origin: </span>
         {info.origin}
-      </p>
+      </p> : null }
       <p>
         <span>Breed Group: </span>
         {info.breed_group}
