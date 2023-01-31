@@ -32,9 +32,9 @@ const Startup = () => {
         <header className="startup-header">
 
             <div className='bichon-container'>
-                <img src={bichon_body} className="bichon-body" alt="bichon frise body" />
+                <img rel="preload" src={bichon_body} className="bichon-body" alt="bichon frise body" />
                 <span className="head-container">
-                  <img src={bichon_head} className="bichon-head" alt="bichon frise head" />
+                  <img rel="preload" src={bichon_head} className="bichon-head" alt="bichon frise head" />
                 </span>
             </div>
 

@@ -8,6 +8,7 @@ const BreedData = (props) => {
       <div className="photo-container">
         <a href={props.breedInfo.image.url}>
           <img
+            rel="preload"
             src={props.breedInfo.image.url}
             alt="Placeholder"
             className="photo"
