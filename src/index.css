@@ -346,8 +346,11 @@ img.menu-image {
  */
 
 .header-container {
+  height: 100px;
+  width: 100vw;
   display: flex;
   justify-content: center;  
+  
 }
 
 
@@ -359,6 +362,9 @@ img.menu-image {
 
 .doggy-link-container {
   height: 6rem;
+  width: 6rem;
+  margin: 0 auto;
+  padding-top: 0.5rem;
 }
 
 .footer-container {
