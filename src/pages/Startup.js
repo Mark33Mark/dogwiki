@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import bichon_body from "../assets/Bichon_Body.png";
-import bichon_head from "../assets/Bichon_Head.png";
+import bichon_body from "../assets/Bichon_Body_280px_height.png";
+import bichon_head from "../assets/Bichon_Head_280px_height.png";
 import InstallPWA from "../components/InstallPWA";
 import { Link } from "react-router-dom";
 
